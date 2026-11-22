@@ -4,13 +4,22 @@ Find out why a locally installed Claude Code skill is missing from the slash-com
 
 ## Run
 
-With Node.js 20 or later, npm, and Git installed, run this from your project root:
+With Node.js 20 or later, npm, and Git installed, download the tool once into a tools directory:
 
 ```sh
-npx --yes github:yukiraa/skill-doctor#v0.1.0
+git clone --branch v0.1.1 --depth 1 https://github.com/yukiraa/skill-doctor.git
+cd skill-doctor
+npm ci --ignore-scripts
 ```
 
-To inspect another project, append its directory. To inspect your personal skills, append `--personal`. Personal mode honors `CLAUDE_CONFIG_DIR` and otherwise uses `~/.claude/skills`.
+Then run either check from that checkout. Replace `../my-project` with the folder you open in Claude Code:
+
+```sh
+node bin/skill-doctor.js ../my-project
+node bin/skill-doctor.js --personal
+```
+
+Personal mode honors `CLAUDE_CONFIG_DIR` and otherwise uses `~/.claude/skills`.
 
 ## Example
 

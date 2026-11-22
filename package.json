@@ -1,13 +1,23 @@
 {
   "name": "@yukiraa/skill-doctor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Diagnose local Claude Code skill installations and show how to fix them",
   "license": "MIT",
   "type": "module",
-  "bin": { "skill-doctor": "bin/skill-doctor.js" },
-  "files": ["bin/"],
-  "engines": { "node": ">=20" },
-  "scripts": { "test": "node --test" },
+  "bin": {
+    "skill-doctor": "bin/skill-doctor.js"
+  },
+  "files": [
+    "bin/"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
   "repository": "github:yukiraa/skill-doctor",
-  "dependencies": { "yaml": "2.9.1" }
+  "dependencies": {
+    "yaml": "2.9.1"
+  }
 }
